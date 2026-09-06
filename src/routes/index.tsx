@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Baby, BookOpen, CalendarCheck, Check, CheckCircle2, ChevronDown, Clock3, HeartPulse, MapPin, MessageCircle, Phone, ShieldCheck, Stethoscope, Syringe } from "lucide-react";
+import { ArrowRight, Baby, BookOpen, CalendarCheck, Check, CheckCircle2, ChevronDown, HeartPulse, MapPin, MessageCircle, Phone, ShieldCheck, Stethoscope, Syringe } from "lucide-react";
 import { useState } from "react";
 import drAteeq from "@/assets/dr-ateeq.jpg.asset.json";
 
@@ -54,6 +54,33 @@ const faqs = [
   ["Is emergency care available?", "For emergency-related assistance, call 03357236622. For serious or life-threatening situations, seek immediate emergency medical care rather than waiting for a clinic appointment."],
 ];
 
+const reviews = [
+  {
+    name: "Tuba Khan",
+    rating: 5,
+    date: "2 months ago",
+    text: "Dr Ateeq is highly professional, knowledgeable, and compassionate. He listened patiently to all my concerns, explained everything clearly, and provided excellent treatment. The clinic was well-managed, and the staff was courteous. I highly recommend Dr. Ateeq to anyone seeking quality medical care.",
+  },
+  {
+    name: "Rao Hamza",
+    rating: 5,
+    date: "2 months ago",
+    text: "Dr. Ateeq Ur Rehman is an excellent child specialist. He is kind, patient, and listens carefully to parents' concerns. He explains the diagnosis and treatment clearly and provides the best care for children. His professionalism and friendly attitude make every visit comfortable. I highly recommend him to anyone looking for a trustworthy pediatrician.",
+  },
+  {
+    name: "Nadia Ahmad",
+    rating: 5,
+    date: "2 months ago",
+    text: "I had a great experience with Dr.Ateeq, highly professional and compassionate child specialist. What I appreciated most is his calm attitude and the way he gives proper time to each patient without Rushing. His diagnosis is accurate and treatment is effective. It's an honor to learn from and work with such a senior. Highly recommended for paediatric care!!",
+  },
+  {
+    name: "Aqsa Jan",
+    rating: 5,
+    date: "2 months ago",
+    text: "Dr Ateeq is an exceptional paediatrician who treats children with genuine care, kindness and professionalism. He takes the time to explain every aspect of a child's condition clearly to parents, ensuring they feel informed, supported and reassured. His compassion, dedication and expertise make a real difference during challenging times. We are truly grateful for the outstanding care and attention he has provided. Highly recommended.",
+  },
+];
+
 function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [expanded, setExpanded] = useState<number | null>(0);
@@ -94,7 +121,7 @@ function HomePage() {
 
       <section id="resources" className="bg-blue-50/60"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24"><div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"><div className="max-w-3xl"><Eyebrow>PARENT RESOURCES & BLOG</Eyebrow><h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Helpful answers for everyday child-health questions.</h2><p className="mt-5 text-lg leading-8 text-slate-600">Build a useful resource library that supports parents between visits.</p></div><a href="#contact" className="inline-flex w-fit items-center gap-2 font-bold text-blue-700">View all resources <ArrowRight size={17}/></a></div><div className="mt-12 grid gap-5 md:grid-cols-3">{resources.map(([title,text],i)=><article key={title} className="rounded-[26px] border border-blue-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"><div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600"><BookOpen size={23}/></div><p className="mt-6 text-xs font-extrabold uppercase tracking-[0.12em] text-blue-600">Article 0{i+1}</p><h3 className="mt-2 text-xl font-extrabold">{title}</h3><p className="mt-3 leading-7 text-slate-600">{text}</p><a href="#contact" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-600">Read article <ArrowRight size={15}/></a></article>)}</div></div></section>
 
-      <section className="bg-white"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24"><div className="text-center"><Eyebrow>PARENT TESTIMONIALS</Eyebrow><h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Real experiences will go here.</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">Use genuine parent reviews to build trust. No fabricated testimonials are included.</p></div><div className="mt-12 grid gap-5 md:grid-cols-3">{[1,2,3].map(n=><div key={n} className="rounded-[26px] border border-dashed border-slate-300 bg-slate-50 p-7"><div className="flex gap-1 text-blue-500">★★★★★</div><p className="mt-5 text-xs font-extrabold uppercase tracking-[0.1em] text-slate-400">Review placeholder</p><p className="mt-2 leading-7 text-slate-500">Add a genuine parent review here.</p><p className="mt-5 text-sm font-bold text-slate-400">Parent Name</p></div>)}</div></div></section>
+      <section className="bg-white"><div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24"><div className="text-center"><Eyebrow>PARENT TESTIMONIALS</Eyebrow><h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Trusted by parents across Multan.</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">Real Google reviews from parents and patients who have shared their experience with Dr. Ateeq.</p></div><div className="mt-12 grid gap-5 md:grid-cols-2">{reviews.map((review)=><article key={review.name} className="group rounded-[26px] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5"><div className="flex items-start justify-between gap-4"><div><div className="flex gap-1 text-amber-500" aria-label={`${review.rating} out of 5 stars`}>{Array.from({length: review.rating}).map((_,i)=><span key={i}>★</span>)}</div><p className="mt-4 text-xs font-extrabold uppercase tracking-[0.12em] text-blue-600">Google Review</p></div><div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-sm font-black text-blue-700">{review.name.charAt(0)}</div></div><p className="mt-5 text-[15px] leading-7 text-slate-600">“{review.text}”</p><div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5"><div><p className="font-extrabold text-slate-900">{review.name}</p><p className="mt-1 text-xs text-slate-400">{review.date}</p></div><div className="text-xs font-bold text-slate-400">Verified on Google</div></div></article>)}</div><div className="mt-10 text-center"><a href={maps} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-extrabold text-slate-800 shadow-sm transition hover:border-blue-200 hover:text-blue-700">See all Google Reviews <ArrowRight size={17}/></a></div></div></section>
 
       <section id="faq" className="bg-slate-50"><div className="mx-auto max-w-4xl px-5 py-20 lg:py-28"><div className="text-center"><Eyebrow>FAQS</Eyebrow><h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Questions parents often ask.</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">Answers to the questions that commonly come before booking.</p></div><div className="mt-12 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">{faqs.map(([q,a],i)=><button key={q} type="button" onClick={()=>setOpenFaq(openFaq===i?null:i)} className="block w-full border-b border-slate-100 p-6 text-left last:border-b-0"><div className="flex items-center justify-between gap-6"><span className="text-base font-extrabold sm:text-lg">{q}</span><ChevronDown size={20} className={`shrink-0 text-blue-600 transition-transform ${openFaq===i?"rotate-180":""}`}/></div>{openFaq===i&&<p className="mt-4 pr-8 text-sm leading-7 text-slate-600 sm:text-base">{a}</p>}</button>)}</div></div></section>
 
