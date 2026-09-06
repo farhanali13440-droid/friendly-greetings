@@ -16,6 +16,8 @@ import {
   UserRound,
 } from "lucide-react";
 import { useState } from "react";
+import drAteeq from "@/assets/dr-ateeq.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -75,9 +77,11 @@ function HomePage() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[38px] bg-blue-100/70 blur-2xl" />
             <div className="relative overflow-hidden rounded-[34px] border border-white bg-white p-3 shadow-2xl shadow-blue-900/10">
-              <div className="flex aspect-[4/4.5] items-end overflow-hidden rounded-[27px] bg-gradient-to-br from-blue-100 via-white to-slate-100">
-                <div className="w-full p-7"><div className="ml-auto max-w-[270px] rounded-3xl border border-white/80 bg-white/90 p-5 shadow-xl backdrop-blur"><p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-600">Dr. Ateeq Ur Rehman</p><p className="mt-1 text-lg font-extrabold text-slate-900">Consultant Child Specialist & Neonatologist</p><p className="mt-2 text-sm leading-6 text-slate-500">Child-friendly care. Clear guidance. Individualized treatment.</p></div></div>
+              <div className="relative flex aspect-[4/4.5] items-end overflow-hidden rounded-[27px] bg-gradient-to-br from-blue-100 via-white to-slate-100">
+                <img src={drAteeq.url} alt="Dr. Ateeq Ur Rehman, Consultant Child Specialist and Neonatologist" className="absolute inset-0 h-full w-full object-cover object-top" />
+                <div className="relative w-full p-7"><div className="ml-auto max-w-[270px] rounded-3xl border border-white/80 bg-white/90 p-5 shadow-xl backdrop-blur"><p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-600">Dr. Ateeq Ur Rehman</p><p className="mt-1 text-lg font-extrabold text-slate-900">Consultant Child Specialist & Neonatologist</p><p className="mt-2 text-sm leading-6 text-slate-500">Child-friendly care. Clear guidance. Individualized treatment.</p></div></div>
               </div>
+
             </div>
           </div>
         </div>
