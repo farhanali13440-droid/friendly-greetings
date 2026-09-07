@@ -18,7 +18,7 @@ const serviceGroups = [
   { icon: Stethoscope, title: "In-Clinic Assessment & Support", intro: "Focused clinical assessment and supportive services available at the clinic.", benefit: "Get useful measurements and clinical assessment during the same visit.", items: ["Nebulization", "Growth assessment", "Pulse oximetry", "Developmental assessment", "Comprehensive pediatric clinical examination", "Newborn examination", "Nutritional assessment", "Weight, height and BMI assessment", "Growth chart assessment", "Feeding assessment", "Clinical assessment of respiratory illness", "Parent counselling and health education"] },
 ];
 
-const concerns = [
+const concerns: [string, string][] = [
   ["Fever & infections", "Persistent fever, recurrent infections and common childhood illnesses."],
   ["Breathing concerns", "Cough, wheezing, asthma and other respiratory symptoms."],
   ["Growth concerns", "Poor weight gain, short stature, BMI and development questions."],
@@ -29,20 +29,20 @@ const concerns = [
   ["Development questions", "Milestones, developmental concerns and delays."],
 ];
 
-const outcomes = [
+const outcomes: [string, string][] = [
   ["Clear answers", "Understand what may be happening and what the next step should be."],
   ["Healthy growth", "Keep track of weight, height, nutrition and developmental milestones."],
   ["Appropriate treatment", "Receive evidence-based care with rational use of medicines and investigations."],
   ["Confident parenting", "Get practical counselling for feeding, prevention, warning signs and follow-up."],
 ];
 
-const resources = [
+const resources: [string, string][] = [
   ["Child Fever Guide", "What parents should know when a child develops a fever."],
   ["Newborn Care Basics", "Practical guidance for feeding, jaundice and early warning signs."],
   ["Healthy Child Growth", "Understanding growth, nutrition and developmental milestones."],
 ];
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What does a pediatrician treat?", "Pediatric care covers newborns, infants, children and adolescents, including common childhood illnesses, respiratory symptoms, digestive concerns, allergies, growth concerns and developmental concerns."],
   ["Does Dr. Ateeq provide newborn and neonatal care?", "Yes. Dr. Ateeq Ur Rehman is a Consultant Child Specialist and Neonatologist and provides newborn and neonatal assessment and follow-up."],
   ["Does the clinic provide vaccination services?", "Vaccination services are not currently provided at Arham Childcare Clinic. Parents can still consult Dr. Ateeq about age-appropriate vaccination schedules, catch-up vaccination and vaccine-related counselling."],
@@ -96,7 +96,6 @@ function HomePage() {
       </header>
 
       <section id="top" className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-white">
-        <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full bg-blue-100/80 blur-3xl"/><div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-sky-50 blur-3xl"/>
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-16 lg:grid-cols-[1.04fr_.96fr] lg:px-8 lg:py-28">
           <div><div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-blue-700 shadow-sm"><ShieldCheck size={16}/> Specialist pediatric & neonatal care in Multan</div><h1 className="max-w-3xl text-5xl font-black leading-[1.01] tracking-[-0.05em] sm:text-6xl lg:text-[76px]">Expert care for your child, from <span className="text-blue-600">newborn to adolescence.</span></h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 lg:text-xl">Compassionate, evidence-based care focused on accurate diagnosis, healthy growth, nutrition and development—without unnecessary tests or medicines when they are not needed.</p><div className="mt-9 flex flex-col gap-3 sm:flex-row"><a href={phone} className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-7 py-4 text-base font-bold text-white shadow-xl shadow-blue-600/20 hover:bg-blue-700"><CalendarCheck size={19}/> Book an Appointment</a><a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-bold text-slate-800 hover:border-blue-200 hover:text-blue-700"><MessageCircle size={19}/> WhatsApp the Clinic</a></div><div className="mt-9 grid max-w-2xl gap-3 sm:grid-cols-3"><TrustCard title="10+ Years" text="Clinical experience"/><TrustCard title="MBBS + FCPS" text="Pediatric Medicine"/><TrustCard title="Specialist" text="Child & neonatal care"/></div></div>
           <div className="relative"><div className="absolute -inset-6 rounded-[46px] bg-blue-100/80 blur-2xl"/><div className="relative rounded-[38px] border border-white bg-white p-3 shadow-2xl shadow-blue-900/10"><div className="relative overflow-hidden rounded-[31px] bg-blue-50"><img src={drAteeq.url} alt="Dr. Ateeq Ur Rehman" className="aspect-[4/5] w-full object-cover object-top"/><div className="absolute inset-x-4 bottom-4 rounded-3xl border border-white/70 bg-white/92 p-5 shadow-xl backdrop-blur-xl"><p className="text-xs font-extrabold uppercase tracking-[0.16em] text-blue-600">Dr. Ateeq Ur Rehman</p><p className="mt-1 text-lg font-extrabold text-slate-950">Consultant Child Specialist & Neonatologist</p><p className="mt-2 text-sm leading-6 text-slate-600">Child-friendly care, clear counselling and individualized treatment.</p></div></div></div></div>
