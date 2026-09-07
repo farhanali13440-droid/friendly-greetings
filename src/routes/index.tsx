@@ -18,7 +18,7 @@ const serviceGroups = [
   { icon: Stethoscope, title: "In-Clinic Assessment & Support", intro: "Focused clinical assessment and supportive services available at the clinic.", benefit: "Get useful measurements and clinical assessment during the same visit.", items: ["Nebulization", "Growth assessment", "Pulse oximetry", "Developmental assessment", "Comprehensive pediatric clinical examination", "Newborn examination", "Nutritional assessment", "Weight, height and BMI assessment", "Growth chart assessment", "Feeding assessment", "Clinical assessment of respiratory illness", "Parent counselling and health education"] },
 ];
 
-const concerns = [
+const concerns: [string, string][] = [
   ["Fever & infections", "Persistent fever, recurrent infections and common childhood illnesses."],
   ["Breathing concerns", "Cough, wheezing, asthma and other respiratory symptoms."],
   ["Growth concerns", "Poor weight gain, short stature, BMI and development questions."],
@@ -29,20 +29,20 @@ const concerns = [
   ["Development questions", "Milestones, developmental concerns and delays."],
 ];
 
-const outcomes = [
+const outcomes: [string, string][] = [
   ["Clear answers", "Understand what may be happening and what the next step should be."],
   ["Healthy growth", "Keep track of weight, height, nutrition and developmental milestones."],
   ["Appropriate treatment", "Receive evidence-based care with rational use of medicines and investigations."],
   ["Confident parenting", "Get practical counselling for feeding, prevention, warning signs and follow-up."],
 ];
 
-const resources = [
+const resources: [string, string][] = [
   ["Child Fever Guide", "What parents should know when a child develops a fever."],
   ["Newborn Care Basics", "Practical guidance for feeding, jaundice and early warning signs."],
   ["Healthy Child Growth", "Understanding growth, nutrition and developmental milestones."],
 ];
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What does a pediatrician treat?", "Pediatric care covers newborns, infants, children and adolescents, including common childhood illnesses, respiratory symptoms, digestive concerns, allergies, growth concerns and developmental concerns."],
   ["Does Dr. Ateeq provide newborn and neonatal care?", "Yes. Dr. Ateeq Ur Rehman is a Consultant Child Specialist and Neonatologist and provides newborn and neonatal assessment and follow-up."],
   ["Does the clinic provide vaccination services?", "Vaccination services are not currently provided at Arham Childcare Clinic. Parents can still consult Dr. Ateeq about age-appropriate vaccination schedules, catch-up vaccination and vaccine-related counselling."],
