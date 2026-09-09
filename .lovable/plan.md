@@ -22,8 +22,10 @@ Use the selected **Boutique Medical Suite** direction as the foundation: editori
 
 3. **First screen**
    - Rebuild the first screen with the exact requested specialization, headline, supporting copy, doctor name, FCPS credential, trust statement, Book an Appointment, and WhatsApp actions.
-   - Create a high-resolution, natural neonatal-care photograph for the dominant visual, with no distressing or invasive scene and no text covering faces.
-   - Keep the image treatment refined and ensure the doctor identity, clinic location, and booking path are immediately clear.
+   - Source a legally usable, professional neonatal-care photograph first; if no suitable licensed photograph is available, use a tasteful neutral placeholder rather than visibly artificial generated imagery.
+   - The visual will show a healthy newborn in a warm, clean clinical setting with subtle professional-care cues, clean negative space, no embedded text, and no distress, invasive procedures, dominant incubator, excessive equipment, or heavy blue grading.
+   - Keep the image treatment refined, preserve the newborn’s face and interaction in desktop and 360px mobile crops, and never imply the child is an actual patient of Dr. Ateeq or Arham Childcare Clinic.
+   - Ensure the doctor identity, clinic location, and booking path are immediately clear without placing text over the baby’s face.
    - Remove blur masks and translucent overlays from readability-critical areas.
 
 4. **Doctor profile and credibility**
