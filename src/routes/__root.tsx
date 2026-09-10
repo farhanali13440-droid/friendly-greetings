@@ -48,19 +48,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arham Childcare Clinic | Pediatrician & Neonatologist in Multan" },
-      { name: "description", content: "Arham Childcare Clinic in Model Town, Multan provides compassionate, evidence-based pediatric and neonatal care by Dr. Ateeq Ur Rehman, MBBS, FCPS Pediatrics." },
       { name: "author", content: "Arham Childcare Clinic" },
-      { property: "og:title", content: "Arham Childcare Clinic | Specialist Child & Newborn Care" },
-      { property: "og:description", content: "Specialist pediatric and neonatal care for newborns, children and adolescents in Model Town, Multan." },
+      { property: "og:site_name", content: "Dr. Ateeq Ur Rehman — Arham Childcare Clinic" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
